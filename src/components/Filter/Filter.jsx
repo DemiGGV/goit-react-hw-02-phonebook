@@ -1,4 +1,4 @@
-// import { FormContainerCSS } from './MainContainerCSS';
+import PropTypes from 'prop-types';
 
 export const Filter = ({ text, onChange }) => {
   return (
@@ -15,4 +15,9 @@ export const Filter = ({ text, onChange }) => {
       />
     </label>
   );
+};
+
+Filter.propTypes = {
+  text: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };

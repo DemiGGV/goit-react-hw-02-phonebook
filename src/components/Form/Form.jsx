@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { FormContainerCSS } from '../MainContainerCSS';
 
@@ -13,8 +14,8 @@ export class Form extends Component {
     });
   };
 
-  handleOnSubmit = event => {
-    event.preventDefault();
+  handleOnSubmit = evt => {
+    evt.preventDefault();
     this.props.formSubmit(this.state);
     this.resetForm();
   };
@@ -59,3 +60,7 @@ export class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  formSubmit: PropTypes.func.isRequired,
+};
