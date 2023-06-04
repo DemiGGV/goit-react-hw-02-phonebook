@@ -19,7 +19,7 @@ export class App extends Component {
 
   handleInputChange = evt => {
     this.setState({
-      [evt.currentTarget.name]: evt.currentTarget.value,
+      [evt.currentTarget.name]: evt.currentTarget.value.trim(),
     });
   };
 

@@ -10,7 +10,7 @@ export class Form extends Component {
 
   handleInputChange = evt => {
     this.setState({
-      [evt.target.name]: evt.target.value.trim(),
+      [evt.target.name]: evt.target.value,
     });
   };
 
