@@ -59,12 +59,12 @@ export class App extends Component {
         <Form formSubmit={this.handleOnSubmit} />
         <Title>Contacts</Title>
         <Filter text={filter} onChange={this.handleInputChange} />
-        {filteredContacts.length ? (
+        {!!filteredContacts.length && (
           <ContactsList
             contacts={filteredContacts}
             onDelete={this.deleteEntries}
           />
-        ) : undefined}
+        )}
         <GlobalStyle />
       </ContainerCSS>
     );
